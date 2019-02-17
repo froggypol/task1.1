@@ -1,0 +1,18 @@
+$ git log
+commit 0ac8c0f1ff00d671f6ca6f52eb467a30c4ba4b0f (HEAD -> master)
+Author: froggypol <poinatsitovich@gmail.com>
+Date:   Mon Feb 18 00:15:23 2019 +0300
+
+    status1.txt
+
+commit 333d77290712e84edba752c513ef32ec304a2f14
+Author: froggypol <poinatsitovich@gmail.com>
+Date:   Mon Feb 18 00:10:52 2019 +0300
+
+    status1.txt
+
+commit 1313b42d2a758c03651c81549f736a3d4c29a3c1
+Author: froggypol <poinatsitovich@gmail.com>
+Date:   Sun Feb 17 22:50:10 2019 +0300
+
+    Add.gitignore
