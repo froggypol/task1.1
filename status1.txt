@@ -1,0 +1,24 @@
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+Changes to be committed:
+        new file:   src/Main.java
+Changes not staged for commit:
+        modified:   src/Main.java
+Untracked files:
+        .idea/
+        task1.1.iml
+
+
+$ git commit -m "Add .gitignore"
+On branch master
+
+Initial commit
+
+Untracked files:
+        .idea/
+        out/
+        src/
+        task1.1.iml
+
+nothing added to commit but untracked files present
