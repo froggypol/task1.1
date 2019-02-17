@@ -21,4 +21,15 @@ Untracked files:
         src/
         task1.1.iml
 
-nothing added to commit but untracked files present
+nothing added to commit but untracked files present$ git log
+commit 333d77290712e84edba752c513ef32ec304a2f14 (HEAD -> master)
+Author: froggypol <poinatsitovich@gmail.com>
+Date:   Mon Feb 18 00:10:52 2019 +0300
+
+    status1.txt
+
+commit 1313b42d2a758c03651c81549f736a3d4c29a3c1
+Author: froggypol <poinatsitovich@gmail.com>
+Date:   Sun Feb 17 22:50:10 2019 +0300
+
+    Add.gitignore
