@@ -33,3 +33,11 @@ Author: froggypol <poinatsitovich@gmail.com>
 Date:   Sun Feb 17 22:50:10 2019 +0300
 
     Add.gitignore
+
+
+Lenovo@DESKTOP-D85MEBM MINGW64 /d/Учеба/2 курс/УП/task1.1/copiedRepos/task1.1 (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
