@@ -1,0 +1,62 @@
+
+	.h1{
+     color: black;
+     font-size: 55px;
+     font-family:"Monotype Corsiva" Cursive;
+	}
+	#footer-site {
+		padding: 20px 0;
+	    background-color: #2e2823;
+		color: #fff;
+		text-align: center;
+	}
+	.myHotel{
+		margin: 20px;
+		max-width: 50%;
+		object-fit: cover;
+	} 
+	.widget li{
+		display: none;
+		color: #fff;
+		margin-right: 20px;
+	}
+	.HotelIcon{
+		margin-top: 20px;
+		width: 65px;
+		align-self: flex-start;
+	}
+	.barbellIcon{
+		 width: 65px;
+		 align-self: flex-start;
+	}
+	.wifiIcon{
+		 width: 65px;
+		 align-self: flex-start;
+	}
+	.StarsIcon{
+		 width: 65px;
+		 align-self: flex-start;
+	}	
+	.paragraph{
+		display: flex;
+		background-color: #FAF0E6; 
+		flex-direction: row;
+	}
+	.myMenu{
+		width: 640px;
+		height: 50px;
+		background-color: #FAF0E6;
+		font-size: 35px;
+	}
+	#photos{
+		overflow-y: scroll; 
+		height: 650px;
+		border: solid 2px pink;
+		margin: 50px auto;
+		width: 90%; 
+	}
+#textIcon{
+	display: flex;
+	 flex-direction: column;
+}
+}
