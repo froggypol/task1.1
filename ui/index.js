@@ -129,6 +129,13 @@ getHotelForCity:function(filterConfig = '' , skip = 0, top = 10 ){
 }
 return result;
 },
+getHotelForName:function(filterConfig = ''){
+        for(let i = 0; i < hotelPosts.length ;  i++){
+    if(hotelPosts[i].name==filterConfig)
+    return true;
+    }  
+    return false;
+},
 validatePost:function(hotelPost){
       if (!hotelPost.hasOwnProperty('description')
         || !hotelPost.hasOwnProperty('wifi_zones')
@@ -150,7 +157,7 @@ validatePost:function(hotelPost){
 return  true;
 },
 addHotel:function(hotel){
-    if(this.validatePost(hotel)===true){
+    if(this.validatePost(hotel)===true && this.getHotelForName(hotel.name)===false){
         hotelPosts.push(hotel);
         return true;
     }
@@ -168,10 +175,13 @@ editHotelPost:function(id, toEdit){
 },
 removeHotel: function(id){
             let hotel = this.getHotel(id);
+            var index;
             if(hotel !== undefined){
-                var index =hotelPosts.indexOf(hotel);
+                index = hotelPosts.indexOf(hotel);
                 hotelPosts.splice(index, 1);
+                return true;
             }
+            return false;
 }
 }
 })();
@@ -180,7 +190,7 @@ console.log(storage.getHotelArray(0, 10));
 console.log(storage.getHotelArray(5, 5));
 console.log(storage.getHotelForCity('Minsk', 0, 10));
 console.log(storage.validatePost({
-    id: 'kkk',
+    id: '1',
     stars: '2',
     description: 'Hotel with good staff in Brest',
     author:'Traveler.com',
@@ -189,16 +199,15 @@ console.log(storage.validatePost({
     wifi_zones:'3'
 }));
 console.log(storage.addHotel({
-    id: '11',
-    stars: '4',
-    description: 'Hotel in the heart of Mogilev',
+     id: '1',
+    stars: '2',
+    description: 'Hotel with good staff in Brest',
     author:'Traveler.com',
     photoLink: 'https://exp.cdn-hotels.com/hotels/17000000/16320000/16310400/16310370/1292bd4f_z.jpg',
-    city:'Mogilev',
-    wifi_zones:'15'
+    city:'Brest',
+    wifi_zones:'3'
 }));
-console.log(storage.getHotel('2'));
+console.log(storage.getHotel('jjj'));
 console.log(storage.editHotelPost('2',{description: 'new description' }));
-console.log(storage.getHotel('2'));
-console.log(storage.removeHotel('1'));
-console.log(storage.getHotelArray(0, 10));
+console.log(storage.getHotel('6'));
+console.log(storage.removeHotel('6'));
