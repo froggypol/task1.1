@@ -12,7 +12,7 @@
 	}
 	.myHotel{
 		margin: 20px;
-		max-width: 50%;
+		max-width: 40%;
 		object-fit: cover;
 	} 
 	.widget li{
@@ -43,6 +43,12 @@
 		flex-direction: row;
 	}
 	.myMenu{
+		width: 640px;
+		height: 50px;
+		background-color: #FAF0E6;
+		font-size: 35px;
+	}
+	.Tags{
 		width: 640px;
 		height: 50px;
 		background-color: #FAF0E6;
