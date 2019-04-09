@@ -7,7 +7,8 @@ let hotelPosts =[
     author:'Renessans Hotel',
     photoLink: 'http://congressminsk.by/wp-content/uploads/sites/4/2014/11/34012151.jpg',
     city:'Minsk',
-    wifi_zones:'5'
+    wifi_zones:'5',
+    hashtags: ["#Minsk", "#Belarus", "#travel"]
 },
 {
     id: '2',
@@ -16,7 +17,8 @@ let hotelPosts =[
     author:'Astoria Hotel',
     photoLink: 'https://fotex.biz/images/foto/7812005010.jpg',
     city:'St.Petersburg',
-    wifi_zones:'13'
+    wifi_zones:'13',
+    hashtags: ["#Petersburg", "#Russia", "#freetime"]
 },
 {
     id: '3',
@@ -25,7 +27,8 @@ let hotelPosts =[
     author:'Beijin Hotel',
     photoLink: 'https://exp.cdn-hotels.com/hotels/17000000/16320000/16310400/16310370/1292bd4f_z.jpg',
     city:'Minsk',
-    wifi_zones:'4'
+    wifi_zones:'4',
+    hashtags: ["#Minsk", "#Belarus", "#modern"]
 },
 {
     id: '4',
@@ -34,7 +37,8 @@ let hotelPosts =[
     author:'Minsk Hotel',
     photoLink: 'https://exp.cdn-hotels.com/hotels/17000000/16320000/16310400/16310370/1292bd4f_z.jpg',
     city:'Minsk',
-    wifi_zones:'2'
+    wifi_zones:'2',
+    hashtags: ["#Minsk", "#Belarus", "#travel"]
 
 },
 {
@@ -44,7 +48,8 @@ let hotelPosts =[
     author:'Grodno_tourist',
     photoLink: 'https://exp.cdn-hotels.com/hotels/17000000/16320000/16310400/16310370/1292bd4f_z.jpg',
     city:'Grodno',
-    wifi_zones:'1'
+    wifi_zones:'1',
+    hashtags: ["#Grodno", "#Belarus", "#comfort"]
 },
 
 {
@@ -54,7 +59,8 @@ let hotelPosts =[
     author:'Belgorod Hotel',
     photoLink: 'http://congressminsk.by/wp-content/uploads/sites/4/2014/11/34012151.jpg',
     city:'Belgorod',
-    wifi_zones:'0'
+    wifi_zones:'0',
+    hashtags: ["#Belgorod", "#Russia", "#hotel"]
 },
 {
     id: '7',
@@ -63,7 +69,8 @@ let hotelPosts =[
     author:'Peter Hotel*****',
     photoLink: 'https://fotex.biz/images/foto/7812005010.jpg',
     city:'St.Petersburg',
-    wifi_zones:'5'
+    wifi_zones:'5',
+    hashtags: ["#Petersburg", "#Russia", "#travel"]
 },
 {
     id: '8',
@@ -72,7 +79,8 @@ let hotelPosts =[
     author:'Vitebsk_tourism',
     photoLink: 'https://exp.cdn-hotels.com/hotels/17000000/16320000/16310400/16310370/1292bd4f_z.jpg',
     city:'Vitebsk',
-    wifi_zones:'8'
+    wifi_zones:'8',
+    hashtags: ["#Vitebsk", "#Belarus", "#homeland"]
 },
 {
     id: '9',
@@ -81,7 +89,8 @@ let hotelPosts =[
     author:'Traveler.com',
     photoLink: 'https://exp.cdn-hotels.com/hotels/17000000/16320000/16310400/16310370/1292bd4f_z.jpg',
     city:'Brest',
-    wifi_zones:'3'
+    wifi_zones:'3',
+    hashtags: ["#Brest", "#Belarus", "#enjoy"]
 },
 {
     id: '10',
@@ -90,7 +99,8 @@ let hotelPosts =[
     author:'Trip.com',
     photoLink: 'https://exp.cdn-hotels.com/hotels/17000000/16320000/16310400/16310370/1292bd4f_z.jpg',
     city:'Mogilev',
-    wifi_zones:'1'
+    wifi_zones:'1',
+    hashtags: ["#Mogilev", "#Belarus", "#city"]
 }
 ];
 return{
@@ -144,6 +154,7 @@ validatePost:function(hotelPost){
         || !hotelPost.hasOwnProperty('id')
         || !hotelPost.hasOwnProperty('city')
         || !hotelPost.hasOwnProperty('stars')
+          || !hotelPost.hasOwnProperty('hashtags')
         ) return false;
         if (typeof hotelPost.description !== 'string'
         || typeof hotelPost.author !== 'string'
@@ -152,7 +163,8 @@ validatePost:function(hotelPost){
         ||typeof hotelPost.stars !== 'string'
         || typeof hotelPost.id !== 'string'
         || typeof hotelPost.wifi_zones !== 'string'
-      ) return false;
+        || !Array.isArray(hotelPost.hashtags)
+        ) return false;
 
 return  true;
 },
@@ -196,8 +208,10 @@ console.log(storage.validatePost({
     author:'Traveler.com',
     photoLink: 'https://exp.cdn-hotels.com/hotels/17000000/16320000/16310400/16310370/1292bd4f_z.jpg',
     city:'Brest',
-    wifi_zones:'3'
+    wifi_zones:'3',
+    hashtags: ["#hello", "#traveller"]
 }));
+
 console.log(storage.addHotel({
      id: '1',
     stars: '2',
@@ -205,7 +219,8 @@ console.log(storage.addHotel({
     author:'Traveler.com',
     photoLink: 'https://exp.cdn-hotels.com/hotels/17000000/16320000/16310400/16310370/1292bd4f_z.jpg',
     city:'Brest',
-    wifi_zones:'3'
+    wifi_zones:'3',
+    hashtags: ["#hello", "#Belarus", "#Minsk", "#traveller"]
 }));
 console.log(storage.getHotel('jjj'));
 console.log(storage.editHotelPost('2',{description: 'new description' }));
