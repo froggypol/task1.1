@@ -1,14 +1,20 @@
 
+	.main-body{
+		position: relative;
+		background: rgb(255, 200, 200);
+	}
 	.h1{
      color: black;
      font-size: 55px;
      font-family:"Monotype Corsiva" Cursive;
 	}
 	#footer-site {
-		padding: 20px 0;
+		padding-bottom: 70px;
+		padding: 30px 0;
 	    background-color: #2e2823;
 		color: #fff;
 		text-align: center;
+		position: relative;
 	}
 	.myHotel{
 		margin: 20px;
@@ -38,9 +44,12 @@
 		 align-self: flex-start;
 	}	
 	.paragraph{
+		width: 70%;
+		padding-left: 90px;
 		display: flex;
 		background-color: #FAF0E6; 
 		flex-direction: row;
+		border-bottom: 2px outset #FFFF;
 	}
 	.myMenu{
 		width: 640px;
@@ -49,20 +58,22 @@
 		font-size: 35px;
 	}
 	.Tags{
-		width: 640px;
 		height: 50px;
 		background-color: #FAF0E6;
 		font-size: 35px;
 	}
-	#photos{
-		overflow-y: scroll; 
-		height: 650px;
-		border: solid 2px pink;
-		margin: 50px auto;
+	.photos{
+		margin: 20px auto;
 		width: 90%; 
+	}
+	#photo-template{
+		width: 50%;
 	}
 #textIcon{
 	display: flex;
 	 flex-direction: column;
+}
+.toBook{
+  position: relative;
 }
 }

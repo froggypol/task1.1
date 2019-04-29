@@ -1,7 +1,7 @@
 const storage = (function(){
 let hotelPosts =[
 {
-    id: '1',
+    name: '1',
     stars: '4',
     description: 'god hotel',
     author:'Renessans Hotel',
@@ -11,7 +11,7 @@ let hotelPosts =[
     hashtags: ["#Minsk", "#Belarus", "#travel"]
 },
 {
-    id: '2',
+    name: '2',
     stars: '5',
     description: 'Hotel in St.Petersburg',
     author:'Astoria Hotel',
@@ -21,7 +21,7 @@ let hotelPosts =[
     hashtags: ["#Petersburg", "#Russia", "#freetime"]
 },
 {
-    id: '3',
+    name: '3',
     stars: '4',
     description: 'Hotel in picturesque place of Minsk',
     author:'Beijin Hotel',
@@ -31,7 +31,7 @@ let hotelPosts =[
     hashtags: ["#Minsk", "#Belarus", "#modern"]
 },
 {
-    id: '4',
+    name: '4',
     stars: '3',
     description: 'Hotel with good staff',
     author:'Minsk Hotel',
@@ -42,7 +42,7 @@ let hotelPosts =[
 
 },
 {
-    id: '5',
+    name: '5',
     stars: '3',
     description: 'Hotel in Grodno',
     author:'Grodno_tourist',
@@ -53,7 +53,7 @@ let hotelPosts =[
 },
 
 {
-    id: '6',
+    name: '6',
     stars: '2',
     description: 'Hotel in Belgorod',
     author:'Belgorod Hotel',
@@ -63,7 +63,7 @@ let hotelPosts =[
     hashtags: ["#Belgorod", "#Russia", "#hotel"]
 },
 {
-    id: '7',
+    name: '7',
     stars: '5',
     description: 'Hotel in St.Petersburg',
     author:'Peter Hotel*****',
@@ -73,7 +73,7 @@ let hotelPosts =[
     hashtags: ["#Petersburg", "#Russia", "#travel"]
 },
 {
-    id: '8',
+    name: '8',
     stars: '4',
     description: 'Vitebsk_home',
     author:'Vitebsk_tourism',
@@ -83,7 +83,7 @@ let hotelPosts =[
     hashtags: ["#Vitebsk", "#Belarus", "#homeland"]
 },
 {
-    id: '9',
+    name: '9',
     stars: '2',
     description: 'Hotel with good staff in Brest',
     author:'Traveler.com',
@@ -93,7 +93,7 @@ let hotelPosts =[
     hashtags: ["#Brest", "#Belarus", "#enjoy"]
 },
 {
-    id: '10',
+    name: '10',
     stars: '2',
     description: 'Hotel in Mogilev',
     author:'Trip.com',
@@ -213,7 +213,7 @@ console.log(storage.validatePost({
 }));
 
 console.log(storage.addHotel({
-     id: '1',
+    id: '1',
     stars: '2',
     description: 'Hotel with good staff in Brest',
     author:'Traveler.com',

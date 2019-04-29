@@ -10,15 +10,53 @@
 
  </head> 
  <body>
-<script src="index.js"></script>
-<script src="index2.js"></script>
  <h1 id="header" style="text-align: center;">
   <span>
     Feel home far away from home!
  </span>
  </h1>
 
-
+<div class="main-body">
+    <header class="main-head">
+      <div class="menu_line" style="border: 2px outset rgb(110, 180, 190); border-right-style: #FAF0E6;">
+        <div class="search">Search
+          <form class="search-form">
+            <u1 style="font-size:1vw;">
+              <li><input list="search-description" placeholder="Description">
+                <datalist id="search-description">
+                </datalist>
+              </li>
+              <li><input list="search-city" placeholder="What city?">
+                <datalist id="search-city">
+                </datalist>
+              </li>
+              <li><input list="search-tags" placeholder="Tags">
+                <datalist id="search-tags">
+                </datalist>
+              </li>
+            </u1>
+            <!--<div class="search-button" id = 'small-search-button'>
+                  <input type="image" name="apply" onclick="doSearch" 
+                  style="width:15%; height:10%;">
+                </div>
+-->
+          </form>
+        </div>
+        <div class="not-logIn">
+          <div class="toLog"><a href="">Personal Info</a>
+            <ul>
+              <li><input type="text" placeholder="Your Name"></li>
+              <li><input type="password" placeholder="Your Surname"></li>
+            </div>
+          <div class="toSign"><a href="">Book hotel</a>
+            <ul>
+              <li><input type="text" placeholder="Name Of Hotel"></li>
+              <li><input type="password" placeholder="Date of Coming"></li>
+              <li><input type="password" placeholder="Date of leaving"></li>
+            </div>
+        </div>
+      </div>
+    </header>
 <form action="http://ab-w.net/info.php" method="post" align="center"name="drop_down_box" wi>
 <select name="menu" class="myMenu" size="1">
 <option value="first" ><style type="text/css" font-family:"Monotype Corsiva" Cursive>Renessainse hotel</style></option>
@@ -27,7 +65,6 @@
 <option value="fourth">Minsk hotel</option>
 </select>
 </form>
-
 <form action="http://ab-w.net/info.php" method="post" align="center"name="drop_down_box" wi>
 <select name="menu" class="Tags" size="1">
 <option value="first" ><style type="text/css" font-family:"Monotype Corsiva" Cursive>#Minsk</style></option>
@@ -36,39 +73,25 @@
 <option value="fourth">#Grodno</option>
 <option value="fifth">#Mogilev</option>
 </select>
-
-<div id="photos">
+</form>
+  <template id = "photo-template">
+<div class="photos">
   <div class="paragraph">
-    <img src="rennessans.jpg" id="1" class="myHotel">
+    <img src="rennessans.jpg" class="myHotel">
     <div class="textIcon">
+        <div class ="name" size="5" align="center">Rennesains Hotel</div>
         <img src="./map.svg" class="HotelIcon" style="align-self: flex-start;">
-      <h1>Location 
-      : pr.Dzerjunskogo 23/a</h1>
+        <div class="location">Location  : pr.Dzerjunskogo 23/a</div>
         <img src="./barbell.svg" class="barbellIcon">
-      <h1>GYM : Free gym. All equipment is modern</h1>
+        <div class="gym">GYM : Free gym. All equipment is modern</div>
         <img src="wifi.svg" class="wifiIcon"></a>
-      <h1>5 free wi-fi zone</h1>
+        <div class="wifi_zones">No wi-fi zones</div>
         <img src="hotel.svg" class="StarsIcon"></a>
-       <h1>5 stars hotel</h1>
+        <div class="stars">4 stars hotel</div>
+        <div class="hashtags">#cool #comfort #relax</div>
     </div>
-  </div>
-
-<div class="paragraph">
- <img src="astoria.jpg" class="myHotel" id="2">
-
- <div class="textIcon">
-    <img src="./map.svg" class="HotelIcon" style="align-self: flex-start;">
-    <h1>Location : pr.Pushkina 18/5</h1>
-    <img src="./barbell.svg" class="barbellIcon">
-    <h1>GYM : Free gym. All equipment is modern</h1>
-    <img src="wifi.svg" class="wifiIcon"></a>
-    <h1>No wi-fi zones</h1>
-    <img src="hotel (1).svg" class="StarsIcon"></a>
-    <h1>4 stars hotel</h1>
-  </div>
-</div>
-
-<div class="paragraph">
+</template>
+<!--<div class="paragraph" id="oneHotel">
  <img src="beijin.jpg" class="myHotel">
 
  <div class="textIcon">
@@ -83,7 +106,7 @@
   </div>
 </div>
   
-  <div class="paragraph">
+  <div class="paragraph" id="oneHotel">
   <img src="minsk.jpg" class="myHotel" ">
   <div class="textIcon">
     <img src="./map.svg" class="HotelIcon" style="align-self: flex-start;">
@@ -97,7 +120,7 @@
   </div> 
 </div>
 
-<div class="paragraph">
+<div class="paragraph" id="oneHotel">
 <img src="piter.jpg" class="myHotel" ">
   <div class="textIcon">
     <img src="./map.svg" class="HotelIcon" style="align-self: flex-start;">
@@ -111,7 +134,8 @@
 </div>
 </div>
 </div>
-
+</template>-->
+</div>
 <footer id="footer-site">
 <div class="menu">
   <ul class="widget">  
@@ -125,7 +149,9 @@
    </p> 
         <span style id="font-style:italic;">&copy; 2019  All rights are reserved </span>
     </div>
-
   </footer>
+  <script src="View.js"></script>
+  <script src="hotelCollection.js"></script>
+  <script src="script-for6.js"></script>
   </body> 
 </html>

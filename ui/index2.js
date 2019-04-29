@@ -74,8 +74,7 @@ class hotelList{
     hotelPost.id = "" + (hotelPosts.length + 1); 
     hotelPosts.push(hotelPost); 
     return true; 
-    } 
-    
+    }
     edit(id, hotelPost) { 
     if (!this.get(id)) { 
     return false; 
