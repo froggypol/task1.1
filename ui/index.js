@@ -1,7 +1,11 @@
 const storage = (function(){
 let hotelPosts =[
 {
+<<<<<<< HEAD
     id: '1',
+=======
+    name: '1',
+>>>>>>> a394426aef7519bbb951836c2f8487227af7b5f9
     stars: '4',
     description: 'god hotel',
     author:'Renessans Hotel',
@@ -11,7 +15,11 @@ let hotelPosts =[
     hashtags: ["#Minsk", "#Belarus", "#travel"]
 },
 {
+<<<<<<< HEAD
     id: '2',
+=======
+    name: '2',
+>>>>>>> a394426aef7519bbb951836c2f8487227af7b5f9
     stars: '5',
     description: 'Hotel in St.Petersburg',
     author:'Astoria Hotel',
@@ -21,7 +29,11 @@ let hotelPosts =[
     hashtags: ["#Petersburg", "#Russia", "#freetime"]
 },
 {
+<<<<<<< HEAD
     id: '3',
+=======
+    name: '3',
+>>>>>>> a394426aef7519bbb951836c2f8487227af7b5f9
     stars: '4',
     description: 'Hotel in picturesque place of Minsk',
     author:'Beijin Hotel',
@@ -31,7 +43,11 @@ let hotelPosts =[
     hashtags: ["#Minsk", "#Belarus", "#modern"]
 },
 {
+<<<<<<< HEAD
     id: '4',
+=======
+    name: '4',
+>>>>>>> a394426aef7519bbb951836c2f8487227af7b5f9
     stars: '3',
     description: 'Hotel with good staff',
     author:'Minsk Hotel',
@@ -42,7 +58,11 @@ let hotelPosts =[
 
 },
 {
+<<<<<<< HEAD
     id: '5',
+=======
+    name: '5',
+>>>>>>> a394426aef7519bbb951836c2f8487227af7b5f9
     stars: '3',
     description: 'Hotel in Grodno',
     author:'Grodno_tourist',
@@ -53,7 +73,11 @@ let hotelPosts =[
 },
 
 {
+<<<<<<< HEAD
     id: '6',
+=======
+    name: '6',
+>>>>>>> a394426aef7519bbb951836c2f8487227af7b5f9
     stars: '2',
     description: 'Hotel in Belgorod',
     author:'Belgorod Hotel',
@@ -63,7 +87,11 @@ let hotelPosts =[
     hashtags: ["#Belgorod", "#Russia", "#hotel"]
 },
 {
+<<<<<<< HEAD
     id: '7',
+=======
+    name: '7',
+>>>>>>> a394426aef7519bbb951836c2f8487227af7b5f9
     stars: '5',
     description: 'Hotel in St.Petersburg',
     author:'Peter Hotel*****',
@@ -73,7 +101,11 @@ let hotelPosts =[
     hashtags: ["#Petersburg", "#Russia", "#travel"]
 },
 {
+<<<<<<< HEAD
     id: '8',
+=======
+    name: '8',
+>>>>>>> a394426aef7519bbb951836c2f8487227af7b5f9
     stars: '4',
     description: 'Vitebsk_home',
     author:'Vitebsk_tourism',
@@ -83,7 +115,11 @@ let hotelPosts =[
     hashtags: ["#Vitebsk", "#Belarus", "#homeland"]
 },
 {
+<<<<<<< HEAD
     id: '9',
+=======
+    name: '9',
+>>>>>>> a394426aef7519bbb951836c2f8487227af7b5f9
     stars: '2',
     description: 'Hotel with good staff in Brest',
     author:'Traveler.com',
@@ -93,7 +129,11 @@ let hotelPosts =[
     hashtags: ["#Brest", "#Belarus", "#enjoy"]
 },
 {
+<<<<<<< HEAD
     id: '10',
+=======
+    name: '10',
+>>>>>>> a394426aef7519bbb951836c2f8487227af7b5f9
     stars: '2',
     description: 'Hotel in Mogilev',
     author:'Trip.com',
@@ -213,7 +253,11 @@ console.log(storage.validatePost({
 }));
 
 console.log(storage.addHotel({
+<<<<<<< HEAD
      id: '1',
+=======
+    id: '1',
+>>>>>>> a394426aef7519bbb951836c2f8487227af7b5f9
     stars: '2',
     description: 'Hotel with good staff in Brest',
     author:'Traveler.com',
