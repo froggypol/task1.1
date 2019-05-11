@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>For-travell-lovers</title>
+   <link rel="stylesheet"  href="./css/index.css">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+ </head> 
+ <body>
+ <h1 id="header" style="text-align: center;">
+  <span>
+    Feel home far away from home!
+ </span>
+ </h1>
+
+<div class="main-body">
+    <header class="main-head">
+      <div class="menu_line" style="border: 2px outset rgb(110, 180, 190); border-right-style: #FAF0E6;">
+        <div class="search">Search
+          <form class="search-form">
+            <u1 style="font-size:1vw;">
+              <li><input list="search-description" placeholder="Description">
+                <datalist id="search-description">
+                </datalist>
+              </li>
+              <li><input list="search-city" placeholder="What city?">
+                <datalist id="search-city">
+                </datalist>
+              </li>
+              <li><input list="search-tags" placeholder="Tags">
+                <datalist id="search-tags">
+                </datalist>
+              </li>
+            </u1>
+            <!--<div class="search-button" id = 'small-search-button'>
+                  <input type="image" name="apply" onclick="doSearch" 
+                  style="width:15%; height:10%;">
+                </div>
+-->
+          </form>
+        </div>
+        <div class="not-logIn">
+          <div class="toLog"><a href="">Sign in</a>
+            <ul>
+              <li><input type="text" placeholder="Логин >3 eng"></li>
+              <li><input type="password" placeholder="Пароль"></li>
+            </div>
+          <div class="toSign"><a href="">Firstly booking at out site??? Sign up right now!</a>
+            <ul>
+              <li><input type="text" placeholder="Login"></li>
+              <li><input type="password" placeholder="Password"></li>
+              <li><input type="password" placeholder="Repeat password"></li>
+            </div>
+        </div>
+      </div>
+    </header>
+<form action="http://ab-w.net/info.php" method="post" align="center"name="drop_down_box" wi>
+<select name="menu" class="myMenu" size="1">
+<option value="first" ><style type="text/css" font-family:"Monotype Corsiva" Cursive>Renessainse hotel</style></option>
+<option selected="selected" value="second">Avrora moon</option>
+<option value="third">Beijin hostel</option>
+<option value="fourth">Minsk hotel</option>
+</select>
+</form>
+<form action="http://ab-w.net/info.php" method="post" align="center"name="drop_down_box" wi>
+<select name="menu" class="Tags" size="1">
+<option value="first" ><style type="text/css" font-family:"Monotype Corsiva" Cursive>#Minsk</style></option>
+<option selected="selected" value="second">#St.Petersburg</option>
+<option value="third">#Moscow</option>
+<option value="fourth">#Grodno</option>
+<option value="fifth">#Mogilev</option>
+</select>
+<div id="photos">
+<div class="paragraph" id="oneHotel">
+ <img src="astoria.jpg" class="myHotel" id="2">
+
+ <div class="textIcon">
+  
+  <div class ="name" size="5" align="center">Astoria</div>
+      <img src="./map.svg" class="HotelIcon">
+      <div id="location" size="5">Location : pr.Pushkina 18/5</div>
+        <img src="./barbell.svg" class="barbellIcon">
+        <div id="gym">GYM : Free gym. All equipment is modern</div>
+          <img src="wifi.svg" class="wifiIcon"></a>
+          <div id="wifi_zones">No wi-fi zones</div>
+            <img src="hotel (1).svg" class="StarsIcon"></a>
+            <div id="stars">4 stars hotel</div>
+              <img src="hotel (1).svg" class="StarsIcon"></a>
+              <div id="hashtags">#cool #comfort #relax</div>
+  </div>
+</div>
+
+<div class="lenta"></div>
+
+  <template id = "photo-template">
+
+  <div class="paragraph" id="oneHotel">
+    <img src="rennessans.jpg" class="myHotel">
+    <div class="textIcon">
+        <div id ="name" size="5" align="center">Rennesains Hotel</div>
+        <img src="./map.svg" class="HotelIcon" style="align-self: flex-start;">
+        <div class="location">Location  : pr.Dzerjunskogo 23/a</div>
+        <img src="./barbell.svg" class="barbellIcon">
+        <div class="gym">GYM : Free gym. All equipment is modern</div>
+        <img src="wifi.svg" class="wifiIcon"></a>
+        <h1>5 free wi-fi zone</h1>
+        <img src="hotel.svg" class="StarsIcon"></a>
+        <h1>5 stars hotel</h1>
+    </div>
+</template>
+<!--<div class="paragraph" id="oneHotel">
+ <img src="beijin.jpg" class="myHotel">
+
+ <div class="textIcon">
+    <img src="./map.svg" class="HotelIcon" style="align-self: flex-start;">
+    <h1>Location : Nekrasova street 221/7a</h1>
+    <img src="./barbell.svg" class="barbellIcon">
+    <h1>GYM : Free gym. All equipment is modern</h1>
+    <img src="wifi.svg" class="wifiIcon"></a>
+    <h1>No wi-fi zones</h1>
+    <img src="hotel (1).svg" class="StarsIcon"></a>
+    <h1>4 stars hotel</h1>
+  </div>
+</div>
+  
+  <div class="paragraph" id="oneHotel">
+  <img src="minsk.jpg" class="myHotel" ">
+  <div class="textIcon">
+    <img src="./map.svg" class="HotelIcon" style="align-self: flex-start;">
+    <h1>Location : pr.Nezavisimosti 152/87a</h1>
+    <img src="./barbell.svg" class="barbellIcon">
+    <h1>GYM : no GYM</h1>
+    <img src="wifi.svg" class="wifiIcon"></a>
+    <h1>4 wi-fi zones</h1>
+    <img src="hotel (2).svg" class="StarsIcon"></a>
+    <h1>3 stars hotel</h1>
+  </div> 
+</div>
+
+<div class="paragraph" id="oneHotel">
+<img src="piter.jpg" class="myHotel" ">
+  <div class="textIcon">
+    <img src="./map.svg" class="HotelIcon" style="align-self: flex-start;">
+    <h1>Location : pr.Nezavisimosti 152/87a</h1>
+    <img src="./barbell.svg" class="barbellIcon">
+    <h1>GYM : no GYM</h1>
+    <img src="wifi.svg" class="wifiIcon"></a>
+    <h1>4 wi-fi zones</h1>
+    <img src="hotel (1).svg" class="StarsIcon"></a>
+    <h1>4 stars hotel</h1>
+</div>
+</div>
+</div>
+</template>-->
+</div>
+<footer id="footer-site">
+<div class="menu">
+  <ul class="widget">  
+  </ul>
+ <div>  
+  <p><a href = "index.html"> Up to page </a></p>
+  <p>
+     <a href="https://www.facebook.com"><img src="facebook.svg" style="width: 35px; margin-left: 30px; height: 35px"></a>
+      <a href="https://www.twitter.com"><img src="twitter.svg" style="width: 35px; margin-left: 20px; height: 35px"></a>
+      <a href="https://www.instagram.com"><img src="instagram.svg" style="width: 35px; margin-left: 20px; height: 35px"></a>
+   </p> 
+        <span style id="font-style:italic;">&copy; 2019  All rights are reserved </span>
+    </div>
+  </footer>
+  <script src="View.js"></script>
+  <script src="hotelCollection.js"></script>
+  <script src="script-for6.js"></script>
+  </body> 
+</html>

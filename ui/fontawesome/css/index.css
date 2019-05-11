@@ -1,0 +1,19 @@
+body{
+	/*text-anchor: middle;*/
+	background-color:#777777;
+}
+	#footer-site {
+		padding-bottom: 20px;
+		padding-top: 420px;
+	    background-color: #2e2823;
+		color: #fff;
+		text-align: center;
+	} 
+	#footer-site a{
+		color: #fff;
+	} 
+	.widget li{
+		display: none;
+color: #fff;
+margin-right: 20px;
+	}
