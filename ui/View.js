@@ -1,5 +1,4 @@
 class View{
-<<<<<<< HEAD
     constructor(user){
         this._user = user;
         this._setUser(user);
@@ -45,7 +44,6 @@ class View{
         list.appendChild(li);
         this._addUserFilter(post);
     }
-=======
      static _setUser(){
         if(pager.getUserName()!==""){
             let list = document.getElementsByClassName("name")[0];
@@ -132,5 +130,4 @@ class View{
     }
     
   }
->>>>>>> a394426aef7519bbb951836c2f8487227af7b5f9
 }

@@ -1,6 +1,4 @@
-
 let pager = (function(){
-<<<<<<< HEAD
    let hPosts = new hotelCollection([
 {
     id: '1',
@@ -15,7 +13,6 @@ let pager = (function(){
     return {
         setPageUser(user){
             pageView = new View(user);
-=======
    let userName = "";
    let hPosts = new hotelCollection([]);
 
@@ -35,7 +32,6 @@ let pager = (function(){
         },
         setPageUser(){
             View._setUser();
->>>>>>> a394426aef7519bbb951836c2f8487227af7b5f9
             },
         setPosts(posts){
             hPosts = new hotelCollection(posts);
@@ -46,19 +42,12 @@ let pager = (function(){
         },
          addPost(post) {
         if (hPosts.add(post)){
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
             this.getPhotos({});
-=======
            // this.getPhotos({});
->>>>>>> a394426aef7519bbb951836c2f8487227af7b5f9
->>>>>>> 797fa673a64887dbd94c1184611c5cd231051f2d
             return true;
         }
         return false;
     },
-<<<<<<< HEAD
     getPhotos(filterConfig, skip = 0, top = 10){
         //View.clear();
         let result = hPosts.getPage(filterConfig, skip = 0, top = 10);
@@ -68,7 +57,6 @@ let pager = (function(){
         createPage(){ 
             hPosts.getPage(0,hotelCollection.getPostsCount() -1).forEach(element => {
                 pageView.showPost(element);
-=======
         getPhotos(filterConfig, skip = 0, top = 10){
         View.clear();
         let result = hPosts.getPage(filterConfig, skip = 0, top = 10);
@@ -78,38 +66,29 @@ let pager = (function(){
         createPage(){ 
             hPosts.getPage(0,hotelCollection.getPostsCount() -1).forEach(element => {
                 View.showPost(element);
->>>>>>> a394426aef7519bbb951836c2f8487227af7b5f9
             });
         },
         removePost(id){
             if(hPosts.remove(id)){
-<<<<<<< HEAD
                 pageView.removePost(id);
-=======
                 View.removePost(id);
->>>>>>> a394426aef7519bbb951836c2f8487227af7b5f9
                 return true;
             }
             return false;
         },
         editPost(id, post){
             if(hPosts.edit(id,post)){
-<<<<<<< HEAD
                 pageView.editPost(id, post);
-=======
                 View.editPost(id, post);
->>>>>>> a394426aef7519bbb951836c2f8487227af7b5f9
                 return true;
             }
             return false;
         },
         createPage(){ 
             hPosts.getPage(0,hPosts.getPostsCount() -1).forEach(element => {
-<<<<<<< HEAD
                 pageView.showPost(element);
             });
         },
-=======
                 View.showPost(element);
             });
         },
@@ -125,8 +104,6 @@ let pager = (function(){
             }
             return false;
         },
-<<<<<<< HEAD
-
  addPhotoPost(post) {     
         if (hPosts.add(post)){      
             this.getPhotos({});        
@@ -138,9 +115,8 @@ let pager = (function(){
     }
 }());
 //pager.logIn("psoudf");
-=======
->>>>>>> a394426aef7519bbb951836c2f8487227af7b5f9
-    }
+
+}
 }());
 
  //pager.setPageUser("Gleb");
@@ -172,7 +148,6 @@ let pager = (function(){
 //     hashTags : ["#color"]
 
  //    }]);
-<<<<<<< HEAD
 pager.addPost({
 name: "5",
 location:"Gleb",
@@ -188,9 +163,7 @@ wifi_zones:"sss"});
 //     likes : ["Petrov","Grealish","Sidorov","Snow"],
 //     hashTags : ["#color", "#my city"]
 //    }); 
-=======
 pager.logIn("psoudf");
->>>>>>> 797fa673a64887dbd94c1184611c5cd231051f2d
 pager.addPost({
     id: "1",
     name:"Astoria",
@@ -229,7 +202,6 @@ pager.addPost({
     wifi_zones:"11 wi-fi zones",
     hashTags:["#cool", "#comfort", "#relax"], 
     }); 
-<<<<<<< HEAD
  pager.addPost({
     id: "4",
     name:"Minsk",
@@ -254,12 +226,9 @@ pager.addPost({
 //pager.editPost("1", 
 //  { stars: '4', location:'boo',}  ); 
 pager.getPhotos({});
-=======
 // pager.getPhotos({});
  pager.removePost("1");
 // pager.getPhotos({});
 pager.editPost("2", 
     { stars: '4', location:'boo',}  ); 
 pager.getPhotos({});
->>>>>>> a394426aef7519bbb951836c2f8487227af7b5f9
->>>>>>> 797fa673a64887dbd94c1184611c5cd231051f2d
