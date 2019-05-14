@@ -11,7 +11,7 @@ class hotelCollection {
       	return this._posts;
         }
 
- getPage(skip = 0, top = 5, filterConfig={}){
+ getPage(filterConfig, skip = 0, top = 5, ){
  	if(typeof(skip)==="object"){
  		filterConfig = skip;
  		skip = 0;
@@ -25,32 +25,19 @@ class hotelCollection {
  	}
 let res = [];
     res = this.getPosts().slice(skip, skip + top);
-    res.sort(function compareStars(a, b){return a.stars - b.stars})
-    if(filterConfig.length !== undefined){
-        res = res.filter(function(element){
-            for(let key in filterConfig){
-                switch (key) {
-                    case 'name':
-                    if(element.name === filterConfig.name) return true;
-                    break;
-                    case 'location':
-                    if(element.location === filterConfig.location) return true;
-                    break;
-                    case 'wifi_zones':
-                     if(element.wifi_zones === filterConfig.wifi_zones) return true;
-                    break;
-                    case 'stars':
-                    if(element.stars === filterConfig.stars) return true;
-                    break;
-                    case 'gym':
-                     if(element.gym === filterConfig.gym) return true;
-                    break;
-                    default:
-                        return false;
-                }
-            }
-        });
+    res = res.sort(function compareStars(a, b){return a.stars - b.stars});
+    //if(Object.keys(filterConfig).length>0){
+      //if(filterConfig!==undefined){//?
+       if (filterConfig.hasOwnProperty('city')) {
+      res = res.filter(post => post.name === filterConfig.city);
     }
+    if (filterConfig.hasOwnProperty('hashTags')) {
+        for (let i = 0; i < filterConfig.hashTags.length; ++i) {
+          res = res.filter(post => post.hashTags.find(post => 
+          	post.toLowerCase() === filterConfig.hashTags[i].toLowerCase()));
+        }
+    }
+//}
     return res;
     }
 

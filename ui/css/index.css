@@ -16,6 +16,11 @@
 		text-align: center;
 		position: relative;
 	}
+	.menu_line{
+		border: 5px outset rgb(110, 180, 190); 
+		border-right-style: #FAF0E6;
+		display:none;
+	}
 	.myHotel{
 		margin: 20px;
 		max-width: 40%;
@@ -56,11 +61,13 @@
 		height: 50px;
 		background-color: #FAF0E6;
 		font-size: 35px;
+		margin-top:1%;
 	}
 	.Tags{
 		height: 50px;
 		background-color: #FAF0E6;
 		font-size: 35px;
+		margin-top:1%;
 	}
 	.photos{
 		margin: 20px auto;
@@ -73,7 +80,123 @@
 	display: flex;
 	 flex-direction: column;
 }
+.calendar{
+	width: 10%;
+}
 .toBook{
   position: relative;
+}
+.not-logIn{
+ 	margin-left: 42%;
+    margin-bottom: 1.5%;
+    display: none;
+}
+.supervisor{
+	display:none;
+	width: 45%;
+}
+.Book{
+	background-color: #EBDAFF;
+	font-size: 1.5vw;
+	border: 1px solid #ad9d80;
+    margin-left: 45%;
+    margin-bottom: 1.5%;
+    margin-right: 40%;
+}
+.Search{
+	background-color: #EBDAFF;
+	font-size: 1.5vw;
+    border: 1px solid #ad9d80;
+    margin-left: 45%;
+    margin-top: 1.5%;
+    margin-bottom: 1.5%;
+    margin-right: 40%;
+}
+.editPict{
+	display:flex;
+	width: 75%;
+}
+.editButton{
+	display: flex;
+	background-color: #EBDAFF;
+	font-size: 1.5vw;
+    border: 1px solid #ad9d80;
+    margin-right: 5%;
+    margin-bottom: 3%;
+    margin-top: 1.5%;
+    width: 40%;
+    height: 25%;
+}
+.edit-post{
+display: flex;
+}
+.deletePict{
+	display:flex;
+	width: 45%;
+}
+.deleteButton{
+	display: flex;
+	background-color: #EBDAFF;
+	font-size: 1.5vw;
+    border: 1px solid #ad9d80;
+    width: 40%;
+}
+.back{
+	margin-top:3%;
+	background-color: #EBDAFF;
+	font-size: 1.5vw;
+    border: 1px solid #ad9d80;
+    margin-left: 80%;
+}
+.loginAdmin{
+	display: none;
+    margin-left: 80%;
+    
+}
+.admin{
+	background-color: #EBDAFF;
+	font-size: 1.5vw;
+    border: 1px solid #ad9d80;
+    margin-left: 80%;
+    margin-right: 5%;
+    margin-top: 1%;
+    margin-bottom: 1.5%;
+}
+.user{
+	background-color: #EBDAFF;
+	font-size: 1.5vw;
+    border: 1px solid #ad9d80;
+    margin-left: 80%;
+    margin-right: 5%;
+    margin-top: 1.5%;
+    margin-bottom: 1%;
+}
+.userPic{
+	display:none;
+	width: 45%;
+}
+.Admin-menu{
+	display:none;
+	margin-left: 50%;
+}
+.Hello{
+	font-size: 3vw;
+	display : none;
+}
+.Search-form{
+	display:none;
+}
+.search{
+	margin-left: 43%;
+    margin-bottom: 1.5%;
+}
+.find{
+	background-color: #FCF3CF;
+	font-size: 1.3vw;
+    border: 1px solid #ad9d80;
+    margin-left: 45%;
+    margin-right: 50%;
+    margin-top: 1.5%;
+    margin-bottom: 1.5%;
 }
 }

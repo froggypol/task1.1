@@ -1,43 +1,40 @@
 
 let pager = (function(){
    let userName = "";
-   let hPosts = new hotelCollection([
-{
-
-    id: "2",
-    name:"Beijin",
-    location:"Gleab",    
-    gym:"ADD Great Day",
-    stars:"3",
-    wifi_zones:"sss",
-    hashTags:["#cool", "#comfort", "#relax"],
-}
-]);
+   let hPosts = new hotelCollection([]);
 
     return {
-
-        getUserName(){
-            return this.userName;
+        logIn(username) {
+        userName = username;
+        //this.showUserInfo(userName, "images/2.jpg");
+        this.getPhotos({});
         },
+        showUserInfo(username, photolink) {
+      View.showUserInfo(photolink, username);
+         },
 
+     logOut() {
+      userName = "";
+      this.getPhotos({});
+        },
         setPageUser(){
-            // pageView = new View(user);
             View._setUser();
             },
         setPosts(posts){
             hPosts = new hotelCollection(posts);
             this.createPage();
         },
-
+        getPost(id) {
+        return hPosts._get(id);
+        },
          addPost(post) {
         if (hPosts.add(post)){
-           // this.getPhotos({});
             return true;
         }
         return false;
     },
         getPhotos(filterConfig, skip = 0, top = 10){
-        //View.clear();
+        View.clear();
         let result = hPosts.getPage(filterConfig, skip = 0, top = 10);
         for(let i = 0; i<result.length; i++)
             View.showPost(result[i]);
@@ -78,70 +75,77 @@ let pager = (function(){
             }
             return false;
         },
+
+ addPhotoPost(post) {     
+        if (hPosts.add(post)){      
+            this.getPhotos({});        
+            return true;        
+        }         return true;
+        return false;      
+         },
+  
     }
 }());
-
- //pager.setPageUser("Gleb");
-//pager.setPosts( [
-//     {id: '1',
-//     description: 'Great Day',
-//     createdAt: new Date('2005-10-20T23:00:00'),
-//     author: 'Ivanov',
-//     photoLink: 'Minsk.JPG',
-//     likes : ["Petrov","Sidorov"],
-//     hashTags : ["#sunny"]
-//    },
-
- //    {id: '2',
-//     description: 'Me and my friends',
-//     createdAt: new Date('2016-01-23T23:15:00'),
-//     author: 'Petrov',
-//     photoLink: 'Minsk.JPG',
-//     likes : ["Grealish","Sidorov"],
-//     hashTags : ["#MU","#WIN","#HardWay","#roadtofinal","#goodluck"]
-//    },
-
- //    {id: '4',
-//     description: 'Great Player',
-//     createdAt: new Date('2001-03-12T11:11:00'),
-//     author: 'Gleb',
-//     photoLink: 'Minsk.JPG',
-//     likes : ["Petrov","Grealish","Sidorov","Snow"],
-//     hashTags : ["#color"]
-
- //    }]);
-pager.logIn("psoudf");
+//pager.logIn("psoudf");
 pager.addPost({
     id: "1",
     name:"Astoria",
     location:"Gleb",    
     gym:"ADD Great Day",
     stars:"4",
-    wifi_zones:"sss",
+    wifi_zones:"7 wi-fi zones",
     hashTags:["#cool", "#comfort", "#relax"]
 }
     );
+pager.addPost({
+
+    id: "2",
+    name:"Beijin",
+    location:"Nezavisimosti 5",    
+    gym:"No GYM",
+    stars:"3",
+    wifi_zones:"No wi-fi zones",
+    hashTags:["#cool", "#comfort", "#relax"],
+});
  pager.addPost({
     id: "3",
     name:"Rennessans",
-    location:"Gleb",    
-    gym:"ADD Great Day",
+    location:"Nekrasova street 221/7a",    
+    gym:"5 GYMs",
     stars:"5",
-    wifi_zones:"sss",
+    wifi_zones:"5 wi-fi zones",
     hashTags:["#cool", "#comfort", "#relax"]
     }); 
  pager.addPost({
     id: "2",
     name:"Beijin",
-    location:"Gleab",    
+    location:"pr.Pobedy 23/a",    
     gym:"ADD Great Day",
     stars:"3",
-    wifi_zones:"sss",
+    wifi_zones:"11 wi-fi zones",
     hashTags:["#cool", "#comfort", "#relax"], 
     }); 
-// pager.getPhotos({});
- pager.removePost("1");
-// pager.getPhotos({});
-pager.editPost("2", 
-    { stars: '4', location:'boo',}  ); 
+ pager.addPost({
+    id: "4",
+    name:"Minsk",
+    location:" pr.Nezavisimosti 152/87a",    
+    gym:"No GYM",
+    stars:"3",
+    wifi_zones:"4 wi-fi zones",
+    hashTags:["#comfort", "#Minsk", "#Belarus"], 
+    }); 
+ pager.addPost({
+    id: "2",
+    name:"Beijin",
+    location:"pr.Pobedy 23/a",    
+    gym:"no GYM",
+    stars:"3",
+    wifi_zones:"11 wi-fi zones",
+    hashTags:["#comfort", "#Minsk", "#Belarus"], 
+    }); 
+//pager.getPhotos({});
+//pager.removePost("2");
+//pager.getPhotos({});
+//pager.editPost("1", 
+//  { stars: '4', location:'boo',}  ); 
 pager.getPhotos({});

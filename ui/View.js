@@ -15,7 +15,8 @@ class View{
         c.innerHTML = `<div class="stars">${user.stars}</div>`;
         let d = document.getElementsByClassName("wifi_zones");
         d.innerHTML = `<div class="wifi_zones">${user.wifi_zones}</div>`;
-       // d.style.display= "align-self: flex-start";
+       let e = document.getElementsByClassName("hashtags");
+       e.innerHTML = `<div class="hashtags">${user.hashTags}</div>`;
     }
      static removePost(id) {
     let template = document.getElementsByClassName("photos").parentNode;
@@ -46,17 +47,37 @@ class View{
         let starsIcon = content.querySelector(".StarsIcon");
         starsIcon.src = `hotel${post.stars}.svg`;
         let hashtags = content.querySelector(".hashtags");
-        str = "";
+        
         if(post.hashTags!==undefined)
-        for(let item of post.hashTags)
-            str+=item+" ";
-      return content;
+            {
+                str = "";
+                    for(let item of post.hashTags)
+                        str+=item+" ";
+                 hashtags.innerHTML = str;
     }
+         let editForm = content.querySelector(".edit-post");
+        //let editSetting = document.getElementsByClassName("editButton")[0];
+        let editButton = content.querySelector(".confirm-edit");
+        let editHashtags = editForm.querySelector("input");
+        if (name.innerHTML === post.name) {
+        //settings.style.display = "block";
+        editForm.id = post.id;
+        editButton.addEventListener("click", function(event) {
+        event.preventDefault();
+        editForm.id = post.id;
+        editForm.style.display = "grid";
+        post.hashTags = editHashtags.value;
+        
+    });
+      
+    }
+    return content;
+}
     static showPost(post) {
     let template = document.querySelector("#photo-template");
     template.parentNode.appendChild(View._createPost(post));
   }
-   static clear() {///?
+   static clear() {
     let full = document.getElementsByClassName("photos");
     for (let i = 0; i < full.length; i++) {
       while (full[i])

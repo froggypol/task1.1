@@ -18,46 +18,52 @@
 
 <div class="main-body">
     <header class="main-head">
-      <div class="menu_line" style="border: 2px outset rgb(110, 180, 190); border-right-style: #FAF0E6;">
-        <div class="search">Search
-          <form class="search-form">
-            <u1 style="font-size:1vw;">
-              <li><input list="search-description" placeholder="Description">
-                <datalist id="search-description">
-                </datalist>
-              </li>
-              <li><input list="search-city" placeholder="What city?">
-                <datalist id="search-city">
-                </datalist>
-              </li>
-              <li><input list="search-tags" placeholder="Tags">
-                <datalist id="search-tags">
-                </datalist>
-              </li>
-            </u1>
-            <!--<div class="search-button" id = 'small-search-button'>
-                  <input type="image" name="apply" onclick="doSearch" 
-                  style="width:15%; height:10%;">
-                </div>
--->
-          </form>
-        </div>
-        <div class="not-logIn">
+      <button class="back">Back</button>
+      <button class="user">
+        <img src="phone-cat_icon-icons.com_76682.png" class="userPic">
+        User Profile</button>
+       <button class="admin">
+        <img src="client-cat_icon-icons.com_76692.png" class="supervisor">Admin Profile</button>
+        <form class="loginAdmin">
+        <ul>
+          <li><input type="text" placeholder="Логин"></li>
+          <li><input type="password" placeholder="Пароль"></li>
+        </ul>
+      </form>
+      <div class="menu_line">
+        <form class="Search-form">
+          <div class="search">Search
+              <p class = "Filter-Tags"><input type="text" placeholder="#tags">
+              </p>
+              <p class="Filter-city"><input type = "text" placeholder="What city?">
+              </p>
+              <p class = "Filter-text"><input type= "text" placeholder="Stars">
+              </p>
+          </div>
+        <button class="find">Close</button>
+        </form>
+        <button class="Search">Search For Filters</button>
+        
+        <form class="not-logIn">
           <div class="toLog"><a href="">Personal Info</a>
             <ul>
               <li><input type="text" placeholder="Your Name"></li>
-              <li><input type="password" placeholder="Your Surname"></li>
+              <li><input type="text" placeholder="Your Surname"></li>
+              <li><input type="password" placeholder="Passport ID"></li>
             </div>
           <div class="toSign"><a href="">Book hotel</a>
             <ul>
               <li><input type="text" placeholder="Name Of Hotel"></li>
-              <li><input type="password" placeholder="Date of Coming"></li>
-              <li><input type="password" placeholder="Date of leaving"></li>
-            </div>
-        </div>
+              <img class = "calendar" src = "iconfinder-document08-1622828_121955.png">
+              <li><input type="date" placeholder="Date of Coming"></li>
+              <li><input type="date" placeholder="Date of leaving"></li>
+
+           </ul> </div>
+        </form>
+        <button class="Book">Book hotel!</button>
       </div>
     </header>
-<form action="http://ab-w.net/info.php" method="post" align="center"name="drop_down_box" wi>
+<!--<form action="http://ab-w.net/info.php" method="post" align="center"name="drop_down_box" wi>
 <select name="menu" class="myMenu" size="1">
 <option value="first" ><style type="text/css" font-family:"Monotype Corsiva" Cursive>Renessainse hotel</style></option>
 <option selected="selected" value="second">Avrora moon</option>
@@ -73,7 +79,7 @@
 <option value="fourth">#Grodno</option>
 <option value="fifth">#Mogilev</option>
 </select>
-</form>
+</form>-->
   <template id = "photo-template">
 <div class="photos">
   <div class="paragraph">
@@ -89,6 +95,18 @@
         <img src="hotel.svg" class="StarsIcon"></a>
         <div class="stars">4 stars hotel</div>
         <div class="hashtags">#cool #comfort #relax</div>
+ <form class="edit-post">
+      <span>Edit Hotel info</span>
+      <img src="10-info-cat_icon-icons.com_76686.png" alt="New photo">
+    <div class="about-photo-all">
+      <input type="text" placeholder="#tags">
+      <button class="confirm-edit">OK</button>
+    </div>
+       <button class="editButton">
+        <img src="edit.png" class="editPict">Edit Hotel</button>
+          <button class="deleteButton">
+        <img src="3-search-cat_icon-icons.com_76679.png" class="deletePict">Delete Hotel</button>
+ </form>
     </div>
 </template>
 <!--<div class="paragraph" id="oneHotel">
@@ -153,5 +171,6 @@
   <script src="View.js"></script>
   <script src="hotelCollection.js"></script>
   <script src="script-for6.js"></script>
+  <script src="Handler.js"></script>
   </body> 
 </html>
