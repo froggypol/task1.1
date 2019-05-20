@@ -150,7 +150,7 @@ let pager = (function(){
 }());
 if(localStorage["postList"]===undefined)
 localStorage.setItem("postList","a");
-pager.start();
+//pager.start();
 pager.addPost({
     id: "4",
     name:"Minsk",

@@ -1,4 +1,5 @@
 let allButtons = document.getElementsByClassName("Book");
+let readyButton = document.getElementsByClassName("ready")[0];
 let formLogin = document.getElementsByClassName("toLog")[0];
  function logining(event) {
   let form = formLogin.querySelector(".login");
@@ -14,24 +15,18 @@ let logButton1 = allButtons[0];
 logButton1.addEventListener("click", loggingIn);
 let addPopUp = document.querySelector(".not-logIn");
 let addDescr = addPopUp.querySelector(".toLog");
-
+readyButton.addEventListener("mousedown", closeBooking);
 function loggingIn(event) {
   event.preventDefault();
   addPopUp.style.display = "grid";
-  document.addEventListener('mousedown', closeLogIn);
+  readyButton.style.display = "grid";
+  //document.addEventListener('mousedown', closeLogIn);
 }
-
-
-function closeLogIn(event) {
-  if (event.target.closest('.not-logIn') === null) {
-    addPopUp.style.display = 'none';
-    document.removeEventListener('mousedown', closeLogIn);
-   // addButton.removeEventListener("click", add1);
-    addDescr.value = "?";
-  }
+function closeBooking(event) {
+  addPopUp.style.display = "none";
+  readyButton.style.display = "none";
+  alert("Welcome To Our Hotel!");
 }
-
-
 let filterButton = document.getElementsByClassName("Search")[0];
 filterButton.addEventListener("click", filtering);
 //let filterB = document.getElementsByClassName("find")[0];
@@ -74,7 +69,7 @@ function closeFiltering(event) {
 let adminLog = document.getElementsByClassName("admin")[0];
 adminLog.addEventListener("click", adminLogIn);
 let formLog = document.getElementsByClassName("loginAdmin")[0];
-let editButt = document.getElementsByClassName("editButton");
+let editButt = document.getElementsByClassName("edit-post");
 let delButt = document.getElementsByClassName("deleteButton");
 for(let i= 0; i<delButt.length; i++){
   delButt[i].addEventListener("click",deleting);

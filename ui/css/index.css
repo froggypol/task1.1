@@ -116,26 +116,15 @@
 	display:flex;
 	width: 75%;
 }
-.editButton{
-	display: flex;
-	background-color: #EBDAFF;
-	font-size: 1.5vw;
-    border: 1px solid #ad9d80;
-    margin-right: 5%;
-    margin-bottom: 3%;
-    margin-top: 1.5%;
-    width: 40%;
-    height: 25%;
-}
 .edit-post{
-display: flex;
+display: none;
 }
 .deletePict{
 	display:flex;
 	width: 45%;
 }
 .deleteButton{
-	display: flex;
+	display: none;
 	background-color: #EBDAFF;
 	font-size: 1.5vw;
     border: 1px solid #ad9d80;
@@ -198,5 +187,15 @@ display: flex;
     margin-right: 50%;
     margin-top: 1.5%;
     margin-bottom: 1.5%;
+}
+.ready{
+	background-color: #FCF3CF;
+	font-size: 1.3vw;
+    border: 1px solid #ad9d80;
+    margin-left: 45%;
+    margin-right: 50%;
+    margin-top: 1.5%;
+    margin-bottom: 1.5%;
+    display: none;
 }
 }
