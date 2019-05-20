@@ -49,10 +49,6 @@
 		 align-self: flex-start;
 	}	
 	.paragraph{
-
-		display: flex;
-		background-color: #FAF0E6; 
-		flex-direction: row;
 		width: 70%;
 		padding-left: 90px;
 		display: flex;
@@ -68,18 +64,10 @@
 		margin-top:1%;
 	}
 	.Tags{
-		width: 640px;
 		height: 50px;
 		background-color: #FAF0E6;
 		font-size: 35px;
 		margin-top:1%;
-	}
-	#photos{
-		overflow-y: scroll; 
-		height: 650px;
-		border: solid 2px pink;
-		margin: 50px auto;
-		width: 75%; 
 	}
 	.photos{
 		margin: 20px auto;
@@ -210,4 +198,5 @@ display: flex;
     margin-right: 50%;
     margin-top: 1.5%;
     margin-bottom: 1.5%;
+}
 }

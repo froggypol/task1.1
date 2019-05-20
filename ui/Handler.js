@@ -47,8 +47,8 @@ let closeButton = document.getElementsByClassName("find")[0];
   //let findDescription = fields[0].querySelector("input");
   let findCity = fields[1].querySelector("input");
   let findHashTags = fields[0].querySelector("input");
-   let filter = {};
-   let b=false;
+  let filter = {};
+  let b=false;
   if (findCity.value !== ""){
     filter.city = findCity.value;
     b=true;
@@ -59,8 +59,9 @@ let closeButton = document.getElementsByClassName("find")[0];
     b=true;
   }
   closeButton.addEventListener("click", closeFiltering);
-  pager.getPhotos(filter);
+  pager.getPhotos(filter);  
 }
+
 function closeFiltering(event) {
  let fields = document.querySelectorAll(".Search-form p");
   let findDescription = fields[0].querySelector("input");
@@ -73,10 +74,24 @@ function closeFiltering(event) {
 let adminLog = document.getElementsByClassName("admin")[0];
 adminLog.addEventListener("click", adminLogIn);
 let formLog = document.getElementsByClassName("loginAdmin")[0];
-let editButt = document.getElementsByClassName("editButton")[0];
-let delButt = document.getElementsByClassName("deleteButton")[0];
+let editButt = document.getElementsByClassName("editButton");
+let delButt = document.getElementsByClassName("deleteButton");
+for(let i= 0; i<delButt.length; i++){
+  delButt[i].addEventListener("click",deleting);
+}
+
+function deleting(event){
+  event.preventDefault();
+  pager.removePost(this.id);
+  for(let i=0; i<editButton.length; i++)
+editButton[i].addEventListener("click", editing);
+
+  for(let i= 0; i<delButt.length; i++){
+  delButt[i].addEventListener("click",deleting);
+}
+}
 let adminPic = document.getElementsByClassName("supervisor")[0];
-let editForm = document.getElementsByClassName("edit-post")[0];
+let editForm = document.getElementsByClassName("edit-post");
 
 function adminLogIn(event){
   event.preventDefault();
@@ -91,9 +106,11 @@ function adminLogIn(event){
    formLog.style.display = "none";
    let user = document.getElementsByClassName("user")[0];
     user.style.display = "none";
-    delButt.style.display = "grid";
-    editButt.style.display = "grid";
-    editForm.style.display="grid";
+    for(let i= 0; i<editButt.length; i++){
+    delButt[i].style.display = "grid";
+    editButt[i].style.display = "grid";
+    editForm[i].style.display="grid";
+  }
     // formLogin.style.display = "inline-block";
   }
 }
@@ -105,7 +122,9 @@ function userProfile(){
   userForm.style.display = "grid";
   userPic.style.display = "grid";
   adminLog.style.display = "none";
-  editForm.style.display = "none";
+  for(let i= 0; i<editForm.length; i++){
+  editForm[i].style.display = "none";
+}
 }
 
 let back = document.getElementsByClassName("back")[0];
@@ -117,34 +136,47 @@ userButton.style.display="grid";
  adminLog.style.display = "grid";
  adminPic.style.display="none";
  formLog.style.display="none";
- delButt.style.display="none";
- editButt.style.display="none";
- editForm.style.display = "none";
+  for(let i= 0; i<editForm.length; i++){
+ delButt[i].style.display="none";
+ editButt[i].style.display="none";
+ editForm[i].style.display = "none";
+}
 }
 
 
 
 //let editPopUp = document.querySelector(".edit-post");
 //let settingsButtons = document.querySelectorAll(".menu-settings ul li");
-let editSetting = document.getElementsByClassName("editButton")[0];
+// let editSetting = document.getElementsByClassName("editButton")[0];
 //let deleteSetting = settingsButtons[1];
 //let editDescr = editPopUp.querySelector("textarea");
 //let photo = editPopUp.querySelector("img");
-let editButton = editForm.querySelector(".confirm-edit");
-editButton.addEventListener("click", editing);
+let editButton = document.querySelectorAll(".confirm-edit");
+for(let i=0; i<editButton.length; i++)
+editButton[i].addEventListener("click", editing);
 function editing(event) {
   event.preventDefault();
   event.stopPropagation();
-  post = pager.getPost(editForm.id);
-  editForm.id = undefined;
+  let editHashtags;
+  for(let i=0; i<editButton.length; i++){
+    if(this==editButton[i]){
+  editHashtags = editForm[i].querySelector("input");
+  post = pager.getPost(this.parentNode.parentNode.parentNode.parentNode.parentNode.id);
+  break;}}//editForm.id = undefined;
   let newPost = post;
     if (confirm("Вы действительно хотите редактировать пост?")) {
-      let editHashtags = editForm.querySelector("input");
+      //let editHashtags = editForm.querySelector("input");
       if(editHashtags.value !== "")
   newPost.hashTags = editHashtags.value.split(" ");
   else newPost.hashTags = [];
       pager.editPost(post.id, newPost);
-      pager.getPhotos({});
-      editForm.style.display = "none";  
+        for(let i=0; i<editButton.length; i++)
+editButton[i].addEventListener("click", editing);
+
+  for(let i= 0; i<delButt.length; i++)
+  delButt[i].addEventListener("click",deleting);
+      //pager.getPhotos({});
+      //editHashtags.style.display = "none";  
        }
 }
+

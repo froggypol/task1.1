@@ -49,14 +49,18 @@ let res = [];
     if (hotelPost.wifi_zones === '') return false; 
      return true; 
     }    
+
     edit(id, photoPost){
         let post = this._get(id);
-        let ar = this.getPosts();
+        post.hashTags = photoPost.hashTags;
+       // let ar = this.getPosts();
         if(this._validate(post) == true){
-        for(let key in photoPost){
-            post[key] = photoPost[key];
+        for(let i=0; i<this._posts.length; i++){
+        	if(id===this._posts[i].id)
+            	this._posts[i] = post;
         }
-        this.getPosts().sort(function compareDates(a, b){return a.stars - b.stars});
+        //this.getPosts().sort(function compareDates(a, b){return a.stars - b.stars});
+        this.save();
         return true;
     }
     return false;
@@ -78,6 +82,7 @@ let res = [];
             oldPost.push(post);
             oldPost.sort(function compareStars(a, b){return a.stars - b.stars})
            	this.setPosts(oldPost);
+           	//this.save();
             return true;
         }
         else return false;
@@ -112,6 +117,7 @@ let res = [];
         if(post !== undefined){
             let index = this.getPosts().indexOf(post);
             this.getPosts().splice(index, 1);
+            this.save();
             return true;
         }
         return false;
@@ -123,4 +129,10 @@ let res = [];
 				return posts[i];
 		}
 	}
+	 save(){
+        let posts = [];
+        posts = this.getPosts();
+        let strPosts = JSON.stringify(posts);
+        localStorage.setItem("postList", strPosts);
+    }
 }
