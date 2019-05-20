@@ -78,12 +78,17 @@ for(let i= 0; i<delButt.length; i++){
 function deleting(event){
   event.preventDefault();
   pager.removePost(this.id);
-  for(let i=0; i<editButton.length; i++)
-editButton[i].addEventListener("click", editing);
-
+  for(let i=0; i<editButton.length; i++){
+    editButton[i].addEventListener("click", editing);
+    delButt[i].style.display = "grid";
+    editButt[i].style.display = "grid";
+    editForm[i].style.display="grid";
+  }
   for(let i= 0; i<delButt.length; i++){
   delButt[i].addEventListener("click",deleting);
-}
+      //pager.getPhotos({});
+      //editHashtags.style.display = "none";  
+       }
 }
 let adminPic = document.getElementsByClassName("supervisor")[0];
 let editForm = document.getElementsByClassName("edit-post");
@@ -105,6 +110,7 @@ function adminLogIn(event){
     delButt[i].style.display = "grid";
     editButt[i].style.display = "grid";
     editForm[i].style.display="grid";
+    editButton[i].style.display = "grid";
   }
     // formLogin.style.display = "inline-block";
   }
@@ -150,6 +156,16 @@ let editButton = document.querySelectorAll(".confirm-edit");
 for(let i=0; i<editButton.length; i++)
 editButton[i].addEventListener("click", editing);
 function editing(event) {
+  for(let i=0; i<editButton.length; i++){
+    editButton[i].addEventListener("click", editing);
+    delButt[i].style.display = "grid";
+    editButt[i].style.display = "grid";
+    editForm[i].style.display="grid";
+  }
+  for(let i= 0; i<delButt.length; i++)
+  delButt[i].addEventListener("click",deleting);
+      //pager.getPhotos({});
+      //editHashtags.style.display = "none";  
   event.preventDefault();
   event.stopPropagation();
   let editHashtags;
@@ -164,14 +180,6 @@ function editing(event) {
       if(editHashtags.value !== "")
   newPost.hashTags = editHashtags.value.split(" ");
   else newPost.hashTags = [];
-      pager.editPost(post.id, newPost);
-        for(let i=0; i<editButton.length; i++)
-editButton[i].addEventListener("click", editing);
-
-  for(let i= 0; i<delButt.length; i++)
-  delButt[i].addEventListener("click",deleting);
-      //pager.getPhotos({});
-      //editHashtags.style.display = "none";  
-       }
+  pager.editPost(post.id, newPost);
 }
-
+}
